@@ -1,0 +1,16 @@
+title: experiment1.html
+description: Firstpage
+template:
+  repo: experiment1.html-template
+  name: experiment1.html
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
